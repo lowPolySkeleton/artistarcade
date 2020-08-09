@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap');
 .container{
     width: 100%;
     margin: 0;
@@ -19,7 +19,7 @@ html, body{
 }
 h1, h2, h3, h4{
 	font-weight: 900;
-	font-family: "Red Hat Display";
+	font-family: "Staatliches";
 	margin: 0px;
 }
 a{
@@ -76,6 +76,9 @@ section.blog{
 section.blog img{
 	width: 100%;
 	height: auto;
+}
+section.blog h2{
+	font-weight: normal;
 }
 .mainLogo{
 	color: #fff;
@@ -166,7 +169,7 @@ section.actions{
 .footer{
 	margin-top: 200px;
 	padding: 1% 2%;
-	font-family: 'Red Hat Display';
+	font-family: 'Staatliches';
 	text-align: right;
 }
 .footer > a{
