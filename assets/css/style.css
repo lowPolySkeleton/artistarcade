@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900|Roboto&display=swap');
+.container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+article img{
+	max-width: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	width: 100%;
+	min-height: 100vh;
+	font-family: "Roboto";
+	background: #121212;
+}
+h1, h2, h3, h4{
+	font-weight: 900;
+	font-family: "Red Hat Display";
+	margin: 0px;
+}
+a{
+	color: #f83600;
+	text-decoration: none;
+}
+section.hero{
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	color: #fff;
+	background: #efefef;
+}
+section.hero #heroLogo{
+	width: 70%;
+	max-width: 600px;
+}
+section.hero #heroLogoSmall{
+	width: 200px;
+}
+.withHide{
+	display: none;
+}
+section.smallHero{
+	height: auto;
+	background: transparent;
+	align-items: flex-end;
+	padding: 5%;
+}
+
+/* BLOG STYLES */
+section.blog .postBody{
+	margin-bottom: 100px
+}
+.info{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #999;
+}
+section.blog{
+	max-width: 700px;
+	margin: 80px auto 0 auto;
+	position: relative;
+	background: #121212;
+	font-size: 21px;
+	line-height: 148%;
+	color: #efefef;
+}
+section.blog img{
+	width: 100%;
+	height: auto;
+}
+.mainLogo{
+	color: #fff;
+	text-align: right;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 40px;
+	margin: 0;
+}
+.center{
+	display: block;
+	padding-top: 100px;
+	text-align: center;
+}
+.btn{
+	background: #f83600;
+	display: inline-block;
+	font-size: 18px;
+	margin: 10px;
+	color: #fff;
+	padding: 10px 20px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	transition: .3s;
+	cursor: pointer;
+	border-radius: 4px;
+	text-transform: capitalize;
+}
+.btn:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transform: translateY(-2px);
+}
+.btnT{
+	background: transparent;
+	border: 2px solid #f83600;
+	color: #f83600;
+	width: 100%;
+	text-align: center;
+}
+.hide{
+	display: none;
+}
+section.actions{
+	max-width: 700px;
+	margin: 80px auto 0 auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.shake{
+	animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0,0,0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	border: none;
+	box-shadow: none;
+	cursor: default;
+}
+.shake:hover{
+	box-shadow: none;
+	transform: translateY(0px);
+}
+.fadeIn{
+	animation: fadeIn .5s ease forwards;
+}
+@keyframes fadeIn{
+	from{
+		margin-top: -10px;
+		opacity: 0;
+	}
+}
+@keyframes shake{
+	10%, 90%{
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80%{
+		transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70%{
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60%{
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+.footer{
+	margin-top: 200px;
+	padding: 1% 2%;
+	font-family: 'Red Hat Display';
+	text-align: right;
+}
+.footer > a{
+	display: inline-block;
+	margin: 15px;
+	transition: .3s ease;
+	padding: 0 0 5px 0;
+	border-bottom: 2px solid transparent;
+}
+.footer > a:hover{
+	border-bottom: 2px solid #f83600;
+}
+@media (max-width: 700px){
+	section.blog .postBody, section.blog h1, section.blog h3, section.blog .info, section.blog h2{
+		padding: 0 10px;
+	}
+	.mainLogo{
+		font-size: 25px;
+	}
+}
