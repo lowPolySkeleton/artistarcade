@@ -68,7 +68,16 @@ section.gallery{
 	flex-direction: row;
 	color: #fff;
 }
-
+.galleryTile img{
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 /* BLOG STYLES */
 section.blog .postBody{
 	margin-bottom: 100px
