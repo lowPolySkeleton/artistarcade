@@ -75,21 +75,27 @@ section.gallery{
 	column-gap: 30px;
   	row-gap: 30px;
 }
-#gallery article{
+#gallery a{
 	background: #000;
 	outline: 2px solid rgba(255,255,255,0) ;
 	transition: .3s;
 }
-#gallery article:hover{
+#gallery a:hover{
 	outline: 2px solid rgba(255,255,255,1) ;
 }
-#gallery article a p{
+#gallery a p{
 	margin: 0;
 	padding: 0;
 }
 .galleryTile img{
 	display: block;
     width: 100%;
+}
+#tileSearch{
+	width: 100%;
+	line-height: 35px;
+	padding: 5px;
+	margin-bottom: 30px;
 }
 /* BLOG STYLES */
 section.blog .postBody{

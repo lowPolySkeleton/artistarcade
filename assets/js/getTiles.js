@@ -17,12 +17,15 @@ function getTiles(limit, skip){
                     const e = data.items[i];
                     console.log(e)
                     
-                    let post = document.createElement('article');
-                    post.classList.add('fadeIn');
-                    post.setAttribute('id', e.sys.id);
-                    post.innerHTML = '<a class="galleryTile" href="' + e.fields.link + '" target="_blank">' + md.render(e.fields.tileImage) + '</a>'
+                    let tile = document.createElement('a');
+                    tile.classList.add('fadeIn');
+                    tile.setAttribute('id', e.sys.id);
+                    tile.setAttribute('href', e.fields.link);
+                    tile.setAttribute('class', 'galleryTile');
+                    tile.setAttribute('data-search', e.fields.searchKeywords + ' ' + e.fields.artistName);
+                    tile.innerHTML = md.render(e.fields.tileImage)
     
-                    gallery.appendChild(post)
+                    gallery.appendChild(tile)
                 }
             }
         }
@@ -34,5 +37,23 @@ function getTiles(limit, skip){
 
 getTiles(999,0)
 
+
+function search() {
+    var input, filter, container, tiles, i, data;
+    input = document.getElementById('tileSearch');
+    filter = input.value.toUpperCase();
+    container = document.getElementById("gallery");
+    tiles = container.getElementsByTagName('a');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < tiles.length; i++) {
+      data = tiles[i].getAttribute('data-search');
+      if (data.toUpperCase().indexOf(filter) > -1) {
+        tiles[i].style.display = "";
+      } else {
+        tiles[i].style.display = "none";
+      }
+    }
+  }
 
 
