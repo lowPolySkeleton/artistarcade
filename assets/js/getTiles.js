@@ -27,7 +27,7 @@ function getTiles(limit, skip){
             }
         }
     };
-    xmlhttp.open('GET', API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries?access_token=' + API_TOKEN + '&content_type=tile&limit=' + limit + '&skip=' + skip + '&order=-fields.artistName');
+    xmlhttp.open('GET', API_BASE_URL + '/spaces/' + API_SPACE_ID + '/entries?access_token=' + API_TOKEN + '&content_type=tile&limit=' + limit + '&skip=' + skip + '&order=fields.artistName');
     xmlhttp.send();
 }
 
